@@ -120,7 +120,7 @@ export class TodolistComponent  {
 
   exportHistory(){
     console.log("history log should be displayed");
-    this.modalService.open('#historyModal');
+    //this.modalService.open('#historyModal');
 
   }
   private logAction(action: string, taskName: string) {
