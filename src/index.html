@@ -1,13 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="taskApp">
 <head>
   <meta charset="utf-8">
   <title>TaskAngular</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- for bootstrap -->
+   <!-- index.html -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
 </head>
-<body>
+<body class="mat-typography bg-dark">
   <app-root></app-root>
+
+  <script>
+    var app = angular.module('taskApp', []);
+
+    app.controller('TaskController', function($scope) {
+      $scope.showTaskForm = false; // Initialize showTaskForm to false
+    });
+
+
+    // Standalone Functionality: Your current application functionality might be entirely 
+    // implemented using Angular components, services, and other
+    //  Angular constructs. In this case, the AngularJS code is simply not needed.
+
+
+    // app.controller('TaskController', function($scope) {
+    //   $scope.tasks = [
+    //     { name: 'Leetcode', description: 'coding practice', dueDate: new Date(2003, 2, 24), priority: 'High', status: 'Completed' }
+    //   ];
+
+    //   $scope.newTask = {};
+    //   $scope.selectedTask = {};
+
+    //   $scope.addTask = function() {
+    //     $scope.tasks.push(angular.copy($scope.newTask));
+    //     $scope.newTask = {};
+    //     $('#taskModal').modal('hide');
+    //   };
+
+    //   $scope.editTask = function(task) {
+    //     $scope.selectedTask = angular.copy(task);
+    //   };
+
+    //   $scope.updateTask = function() {
+    //     var index = $scope.tasks.findIndex(t => t.name === $scope.selectedTask.name);
+    //     $scope.tasks[index] = angular.copy($scope.selectedTask);
+    //     $scope.selectedTask = {};
+    //     $('#editTaskModal').modal('hide');
+    //   };
+
+    //   $scope.deleteTask = function(task) {
+    //     var index = $scope.tasks.indexOf(task);
+    //     $scope.tasks.splice(index, 1);
+    //   };
+    // });
+  </script>
 </body>
 </html>
